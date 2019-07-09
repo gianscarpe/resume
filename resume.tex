@@ -1,0 +1,117 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2015 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% moderncv themes
+\moderncvstyle{casual}                             % style options are 'casual' (default), 'classic', 'banking', 'oldstyle' and 'fancy'
+\moderncvcolor{blue}                               % color options 'black', 'blue' (default), 'burgundy', 'green', 'grey', 'orange', 'purple' and 'red'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+%\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+
+% adjust the page margins
+\usepackage[scale=0.77]{geometry}
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvheadnamewidth}{10cm}            % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+\usepackage[utf8]{inputenc}
+\firstname{Gianluca}
+\familyname{Scarpellini}
+\title{Curriculum Vitae}                           % optional, remove / comment the line if not wanted
+\address{Orio al Serio (BG)}{24050}{}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
+\mobile{+39~(340)~802~8785}                          % optional
+\email{gianluca@scarpellini.cloud}                               % optional
+\photo[64pt][0.4pt]{foto.jpg}              % optional
+%\quote{Some quote}                                 % optional
+\social[github]{gianscarpe}
+
+\begin{document}
+	\makecvtitle
+	
+	\section{Studi}
+	
+	\cventry{2010 -- 2015}{Ragioniere - Programmatore}{ITC Belotti}{Bergamo}{86/100}{}
+	
+	\cventry{2015 -- 2018}{Laurea triennale in Informatica}{Università degli studi di Milano - Bicocca}{}{110L/110}{}
+	\cventry{2019 -- 2021}{Laurea magistrale in Informatica}{Università degli studi di Milano - Bicocca}{}{}{Ambiti di interesse:
+		\begin{itemize}%
+			\item Computer vision e Pattern Recognition (OpenCV, Matlab Computer Vision toolkit)
+			\item Deep Learning (TensorFlow, Keras)
+			\item Data \& Text Mining (Knime, librerie Python e R)
+			\item HPC (MPI, Cuda)
+\end{itemize}}
+
+	\subsection{Tesi}
+\cventry{2018}{Classificazione da flusso RGB e LIDAR}{IVL: Image and Vision Lab}{Milano - Bicocca}{}{Sviluppo di un applicativo per la classificazione e il riconoscimento di auto, ciclisti e pedoni 	
+	\begin{itemize}%
+		\item Analisi di dati Lidar e telecamere per generare immagini RGBD
+		\item AI con framework Pytorch per l'object recognition (ResNet, Yolo)
+		\item Esperienza con dataset di benchmark (Kitti Benchmark)
+\end{itemize}}
+
+	
+	\section{Esperienze}
+	
+		\cventry{2019 -- }{Intern}{ARGO Vision Srl}{Milano}{}{Sviluppatore AI
+		\begin{itemize}%
+			\item Sviluppo applicativi di ML per computer vision
+			\item Sviluppo applicativi a micorservizi
+	\end{itemize}}
+
+	\cventry{2017 -- 2019}{Backend Developer}{Flyingfood Srls}{Bergamo}{}{Sviluppatore di software backend per un'innovativa startup bergamasca.
+		\begin{itemize}%
+			\item Sviluppo in ambiente ASP.NET e Node.JS
+			\item Database SQLServer e MongoDB
+	\end{itemize}}
+	
+	\cventry{2016 -- 2017}{Giornalista Freelancer}{Bergamopost}{Bergamo}{}{
+		\begin{itemize}%
+			\item Comunicazione
+			\item Sintesi
+			\item Lavoro in piena autonomia
+			\item Rispetto dei tempi di consegna
+	\end{itemize}}
+	
+	\section{Linguaggi}
+	\cvitem{Python}{Esperienza lavorativa}
+	\cvitem{Node.js}{Esperienza lavorativa}
+	\cvitem{C\#}{Esperienza lavorativa}
+	\cvitem{SQL}{Esperienza lavorativa}
+	\cvitem{Matlab}{Progetti universitari}
+	\cvitem{Java}{Progetti universitari}
+	\cvitem{R}{Progetti universitari}
+	
+	
+	\section{Framework e librerie}
+	\cvitem{Tensorflow}{Esperienza lavorativa}
+	\cvitem{Keras}{Esperienza lavorativa}
+	\cvitem{Pytorch}{Esperienza di tesi}
+	
+	\section{Inglese}
+	\cvitemwithcomment{Reading}{B2}{Periodici, libri universitari (e non) in inglese}
+	\cvitemwithcomment{Writing}{B2}{Mail e corrispondenza}
+	\cvitemwithcomment{Speaking}{B2}{Pratica in un corso di lingua}
+	\cvitemwithcomment{Listening}{B2}{Podcast e Ted Talks }
+	
+	\section{Interessi}
+	\cventry{}{Fotografia, scrittura e lettura}{}{}{}{Una passione prima che un lavoro, anche come freelancer per Bergamopost durante l'università.} % arguments 3 to 6 can be left empty
+	\cventry{}{Scienza e tecnologia}{}{}{}{Passione sin da piccolo per scienza e tecnologia. Studente sempre pronto ad apprendere e mettersi in gioco, e corsista su piattaforme quali Khan Accademy e Udacity.}% arguments 3 to 6 can be left empty
+	
+	\section{Privacy}
+	\cvitem{}{Autorizzo il trattamento dei miei dati personali ai sensi del Decreto Legislativo 30 giugno 2003, n. 196 "Codice in materia di protezione dei dati personali.} % arguments 3 to 6 can be left empty
+
+\end{document}
+
+
+
+
+
