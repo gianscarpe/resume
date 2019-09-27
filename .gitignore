@@ -1,5 +1,6 @@
 ## Core latex/pdflatex auxiliary files:
 *.jpg
+*.png
 *.aux
 *.lof
 *.log
@@ -241,3 +242,5 @@ TSWLatexianTemp*
 
 # generated if using elsarticle.cls
 *.spl
+
+.DS_STORE
