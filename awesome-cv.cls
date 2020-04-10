@@ -193,6 +193,7 @@ BoldItalicFont=*-BoldItalic,
 \newcommand*{\headeraddressstyle}[1]{{\fontsize{8pt}{1em}\headerfont\itshape\color{lighttext} #1}}
 \newcommand*{\headersocialstyle}[1]{{\fontsize{6.8pt}{1em}\headerfont\color{text} #1}}
 \newcommand*{\headerquotestyle}[1]{{\fontsize{9pt}{1em}\bodyfont\itshape\color{darktext} #1}}
+\newcommand*{\headersummarystyle}[1]{{\fontsize{10pt}{1em}\bodyfont\bfseries\color{darktext} #1}}
 \newcommand*{\footerstyle}[1]{{\fontsize{8pt}{1em}\footerfont\scshape\color{lighttext} #1}}
 \newcommand*{\sectionstyle}[1]{{\fontsize{16pt}{1em}\bodyfont\bfseries\color{text}\@sectioncolor #1}}
 \newcommand*{\subsectionstyle}[1]{{\fontsize{12pt}{1em}\bodyfont\scshape\textcolor{text}{#1}}}
@@ -267,6 +268,9 @@ BoldItalicFont=*-BoldItalic,
 % Define writer's address
 % Usage: \address{<address>}
 \newcommand*{\address}[1]{\def\@address{#1}}
+
+% Usage: \summary{blablabla}
+\newcommand*{\summary}[1]{\def\@summary{#1}}
 
 % Define writer's position
 % Usage: \name{<position>}
@@ -371,12 +375,13 @@ BoldItalicFont=*-BoldItalic,
 \newcommand{\acvHeaderAfterAddressSkip}{-.5mm}
 \newcommand{\acvHeaderIconSep}{\space}
 \newcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
-\newcommand{\acvHeaderAfterSocialSkip}{6mm}
-\newcommand{\acvHeaderAfterQuoteSkip}{5mm}
+\newcommand{\acvHeaderAfterSocialSkip}{3mm}
+\newcommand{\acvHeaderAfterQuoteSkip}{3mm}
+\newcommand{\acvHeaderAfterSummarySkip}{1mm}
 
 % Others
-\newcommand{\acvSectionTopSkip}{3mm}
-\newcommand{\acvSectionContentTopSkip}{2.5mm}
+\newcommand{\acvSectionTopSkip}{1mm}
+\newcommand{\acvSectionContentTopSkip}{1mm}
 
 
 %-------------------------------------------------------------------------------
@@ -511,6 +516,9 @@ BoldItalicFont=*-BoldItalic,
     \ifthenelse{\isundefined{\@quote}}%
       {}%
       {\headerquotestyle{\@quote\\}\vspace{\acvHeaderAfterQuoteSkip}}%
+     \ifthenelse{\isundefined{\@summary}}%
+      {}%
+      {\headersummarystyle{\@summary\\}\vspace{\acvHeaderAfterSummarySkip}}%
   \end{minipage}%
   \begin{minipage}[c]{\headerphotowidth}%
     \ifthenelse{\equal{\@photoalign}{right}}{\raggedleft\drawphoto}{}
@@ -564,7 +572,7 @@ BoldItalicFont=*-BoldItalic,
 % Define an entry of cv information
 % Usage: \cventry{<position>}{<title>}{<location>}{<date>}{<description>}
 \newcommand*{\cventry}[5]{%
-  \vspace{-2.0mm}
+  \vspace{-2.3mm}
   \setlength\tabcolsep{0pt}
   \setlength{\extrarowheight}{0pt}
   \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth - 4.5cm} R{4.5cm}}
