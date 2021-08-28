@@ -1,0 +1,240 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Deedy - One Page Two Column Resume
+% LaTeX Template
+% Version 1.2 (16/9/2014)
+%
+% Original author:
+% Debarghya Das (http://debarghyadas.com)
+%
+% Original repository:
+% https://github.com/deedydas/Deedy-Resume
+%
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+% This template uses several fonts not included with Windows/Linux by
+% default. If you get compilation errors saying a font is missing, find the line
+% on which the font is used and either change it to a font included with your
+% operating system or comment the line out to use the default font.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% TODO:
+% 1. Integrate biber/bibtex for article citation under publications.
+% 2. Figure out a smoother way for the document to flow onto the next page.
+% 3. Add styling information for a "Projects/Hacks" section.
+% 4. Add location/address information
+% 5. Merge OpenFont and MacFonts as a single sty with options.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% CHANGELOG:
+% v1.1:
+% 1. Fixed several compilation bugs with \renewcommand
+% 2. Got Open-source fonts (Windows/Linux support)
+% 3. Added Last Updated
+% 4. Move Title styling into .sty
+% 5. Commented .sty file.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Known Issues:
+% 1. Overflows onto second page if any column's contents are more than the
+% vertical limit
+% 2. Hacky space on the first bullet point on the second column.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\documentclass[]{resume}
+\usepackage{fontawesome}
+\usepackage{fancyhdr}
+ \usepackage{graphicx}
+\pagestyle{fancy}
+\fancyhf{}
+ 
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     LAST UPDATED DATE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     TITLE NAME
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\namesection{Gianluca}{Scarpellini}{ \urlstyle{same}\href{http://blog.scarpellini.dev}{blog.scarpellini.dev} | \href{mailto:gianluca@scarpellini.dev}{gianluca@scarpellini.dev} | \href{mailto:gianluca.scarpellini@iit.it}{gianluca.scarpellini@iit.it}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN ONE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{minipage}[t]{0.33\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EDUCATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Education} 
+
+\subsection{University of Milano-Bicocca}
+\descript{MS in Computer Science}
+\location{Oct 2020 | Milan, Italy}
+\location{GPA: 110L / 110}
+\descript{BS in Computer Science}
+\location{Jul 2018 | Milan, Italy}
+\location{GPA: 110L / 110}
+
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     LINKS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Links} 
+\faGithub \hspace{3} \href{https://github.com/gianscarpe}{\bf gianscarpe} \\
+\faLinkedin \hspace{3} \href{https://www.linkedin.com/in/gianlucascarpellini}{\bf gianlucascarpellini} \\
+\faTwitter \hspace{3}  \href{https://twitter.com/gianscarpellini}{\bf gianscarpellini} \\
+\faMedium \hspace{3}  \href{https://twitter.com/gianscarpellini}{\bf gianscarpellini} \\
+\sectionsep
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     COURSEWORK
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Coursework}
+\subsection{University}
+Advanced Machine Learning \\
+Computer Vision \\
+Robotics \\
+Signal processing \\
+Probabilistic models \\
+Machine Learning\\
+\sectionsep
+\subsection{Online}
+Deep Reinforcement Learning (Udacity) \\
+Probabilistic Machine Learning (Coursera) \\
+\sectionsep
+\subsection{Summer schools}
+Eastern European Machine Learning 2021\\
+Mediterranean Machine Learning 2021\\
+\sectionsep
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     SKILLS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Skills}
+\subsection{Programming languages}
+\location{Over 5000 lines:}
+ Python \textbullet{} Node.js \textbullet{} C\#  \textbullet{} Matlab \textbullet{} C++  \\
+\location{Proficiency with:}
+Opencv \textbullet{} Pytorch \textbullet{} Pytorch-lightning \\ Keras \textbullet{} 
+Tensorflow \textbullet{} Scikit-learn \textbullet{} 
+\sectionsep
+\sectionsep
+    \hspace{8cm} \includegraphics[width=5cm]{qr.png}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN TWO
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{minipage} 
+\hfill
+\begin{minipage}[t]{0.66\textwidth} 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     RESEARCH
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Who am I}
+My name is Gianluca and I'm a 1st year PhD student at the Italian Institute of Technology. I want to help energy-intensive industries reducing their carbon footprint with machine learning and computer vision. Get in touch if you want to know more!
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EXPERIENCE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Experience}
+\runsubsection{Argo Vision}
+\descript{| ML Research Internship }
+\location{May 2019 - Jan 2020 | Milan, Italy}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+ \item Trained state-of-the-art models for aerial
+  semantic segmentation with IOU > 80\% (Keras, Hyperopt) \item Trained models
+  for car model and maker classification (200 classes) with accuracy > 80\% (Keras)
+  \item Adapted a plate detection \& OCR pipeline for raspberry pi (Keras, Darknet, Tensorflow lite)
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Flash Delivery}
+\descript{| Back-end Engineer }
+\location{Jun 2017 – Apr 2019 | Bergamo, Italy}
+\begin{tightemize}
+\item Developed and deployed back-end infrastructure (C\#, Node.JS)
+\item Maintained database and data analysis (SQLServer, MongoDB)
+\end{tightemize}
+\sectionsep
+\runsubsection{Bergamopost}
+\descript{| Freelance journalist }
+\location{Sep 2016 – Sep 2017 | Bergamo, Italy}
+
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     RESEARCH
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Research}
+\runsubsection{Italian Institute of Technology}\\
+\descript{Ph.D. Student}
+\location{Nov 2020 – Present | Genova, Italy}
+\descript{Visiting Scientist}
+\location{Mar 2020 – Oct 2020 | Genova, Italy}
+\begin{tightemize}
+\item Developed the first pipeline for solving human pose estimation with a single event-camera. Published at CVPR2021 [\href{https://blog.scarpellini.dev/tags/event-cameras/}{blog posts}]
+\item Research on uncertainty estimation and object-detection for robotics applications
+\end{tightemize}
+\sectionsep
+\runsubsection{Imaging and Vision Lab}
+\descript{| Undergraduate Researcher}
+\location{Mar 2018 – Jul 2018 | Milan, Italy}
+I conducted research for my thesis as an undergraduate student. My works focused on car, pedestrians, and cyclists detection from RGB ad LIDAR data in road scenarios. Experience on Kitti Vision benchmark suite.
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     AWARDS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Open-source contributions} 
+\begin{tabular}{rll}
+2021	     & Test refactoring and multi-gpu utils & Pytorch Lightning [\href{https://github.com/belerico/insertion-matcher}{code}] \\
+2020	     & NLP pipeline for advertasing matching  & Open-source [\href{https://github.com/belerico/insertion-matcher}{code}]  \\
+2018	     & Classical CV pipeline for chessboard detection & Open-source [\href{https://github.com/gianscarpe/chess_detection}{code}]  \\
+
+
+\end{tabular}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     PUBLICATIONS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Publications} 
+\renewcommand\refname{\vskip -1.5em} % Couldn't get this working from the .cls file
+\bibliographystyle{abbrv}
+\bibliography{publications}
+\nocite{*}
+
+\end{minipage} 
+\end{document}  \documentclass[]{article}
